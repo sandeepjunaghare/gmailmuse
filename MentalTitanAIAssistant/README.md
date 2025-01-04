@@ -1,8 +1,3 @@
-# gws-genai-addon-sample
-
-A sample Google Workspace add-on for Google Drive and Gmail using Node.js and demonstrating how to use various Generative AI APIs.
-
-Here is a diagram that shows the different components in this sample solution:
 
 ```mermaid
 flowchart LR
@@ -101,12 +96,12 @@ PROJECT_ID=$(gcloud config get-value project)
 
 # Grant Storage Object Viewer role
 gcloud projects add-iam-policy-binding $PROJECT_ID \
-    --member="serviceAccount:45764552444-compute@developer.gserviceaccount.com" \
+    --member="serviceAccount:<project-number>-compute@developer.gserviceaccount.com" \
     --role="roles/storage.objectViewer"
 
 # Grant Logs Writer role
 gcloud projects add-iam-policy-binding $PROJECT_ID \
-    --member="serviceAccount:45764552444-compute@developer.gserviceaccount.com" \
+    --member="serviceAccount:<project-number>-compute@developer.gserviceaccount.com" \
     --role="roles/logging.logWriter"
 
 
